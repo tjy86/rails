@@ -1,0 +1,11 @@
+<% port = @stocks.split(', ') %>
+<% quote_type = YahooFinance::StandardQuote %>
+
+<% port.each do |t| %>
+	<div class="s">
+		<%= t.upcase %>
+		<p>
+		<%= YahooFinance::get_quotes( quote_type, port )[t.upcase].lastTrade %>
+	</div>
+
+<% end %>

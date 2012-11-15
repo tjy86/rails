@@ -1,0 +1,19 @@
+<% @movs.each do |t| %>
+<div class="mov">
+	<%= image_tag t["Poster"] %><br>
+	Title: <%= t["Title"] %><p>
+	<%= t["Year"] %><br>
+	<%= t["Rated"] %><br>
+	<%= t["Released"] %><br>
+	<%= t["Runtime"] %><br>
+	<%= t["Director"] %><br>
+	Genres:
+	<ul>
+	<% t["Genre"].split(', ').each do |g| %>
+		<li><%= g %>
+			<%end%>
+	</ul>
+	<p>
+
+</div>
+<%end%>

@@ -1,0 +1,12 @@
+body{
+	background: gray;
+}
+.s{
+	width: 100px;
+	height: 100px;
+	border: 1px dashed #000;
+	margin: 10px;
+	padding: 10px;
+	background: #fff;
+	float:left;
+}
