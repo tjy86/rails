@@ -1,0 +1,20 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <b>Name:</b>
+  <%= @mp3.name %>
+</p>
+
+<p>
+  <b>Song:</b>
+  <%= @mp3.song %>
+</p>
+
+<p>
+  <b>Youtube:</b>
+  <%= @mp3.youtube %>
+</p>
+
+
+<%= link_to 'Edit', edit_mp3_path(@mp3) %> |
+<%= link_to 'Back', mp3s_path %>
