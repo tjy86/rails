@@ -1,0 +1,14 @@
+<%= @s %>
+<p>
+	<ul>
+		<% @quotes.each do |x| %>
+			<li>  <%= number_to_currency x %>  </li>
+		<% end %>
+	</ul>
+
+	<%= number_to_currency @avg %>
+
+<p>
+<%= link_to "home", root_path %>
+<p>
+<%= link_to "tally", portfolio_path %>

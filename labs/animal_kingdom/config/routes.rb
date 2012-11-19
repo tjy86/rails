@@ -1,8 +1,18 @@
+AnimalKingdom::Application.routes.draw do
+  
+  match '/animals' => 'animals#index', :via => :get
+  match '/animals' => 'animals#create', :via => :post
+  match '/animals/new' => 'animals#new', :via => :get
+  match '/animals/:id' => 'animals#show', :via => :get, :as => 'animal'
+  match '/animals/:id/edit' => 'animals#edit', :via => :get, :as => 'edit_animal'
+  match '/animals/:id' => 'animals#update', :via => :put
+  match '/animals/:id' => 'animals#destroy', :via => :delete
 
-AptFinder::Application.routes.draw do
+  # ORRR!!!
+  # resources :animals
 
 
-
+  
   # The priority is based upon order of creation:
   # first created -> highest priority.
 
@@ -52,7 +62,7 @@ AptFinder::Application.routes.draw do
 
   # You can have the root of your site routed with "root"
   # just remember to delete public/index.html.
-  # root :to => 'welcome#index'
+  root :to => 'home#index'
 
   # See how all your routes lay out with "rake routes"
 

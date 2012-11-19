@@ -1,0 +1,26 @@
+/* 
+ *= require 'reset'
+ *= require_self
+*/
+
+.field label{
+	display: block;
+}
+
+.field {
+	margin-bottom: 10px;
+}
+
+body{
+	background: #252525;
+	padding: 25px;
+	color: #ccc;
+}
+
+li.error{
+	color: #f00;
+}
+
+a{
+	color: yellow;
+}

@@ -1,8 +1,6 @@
-
-AptFinder::Application.routes.draw do
-
-
-
+Exercise07::Application.routes.draw do
+  match '/quote' => 'a#quote'
+  match '/results' => 'a#results', :via => :post
   # The priority is based upon order of creation:
   # first created -> highest priority.
 

@@ -1,0 +1,7 @@
+Get Quote
+
+<%= form_tag '/results' do %>
+	stock: <%= text_field_tag 'stocks' %>
+	number: <%= number_field_tag 'n' %>
+	<%= submit_tag 'go' %>
+	<% end %>

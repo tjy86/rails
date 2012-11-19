@@ -1,0 +1,8 @@
+Results
+
+<br>
+<% @ss.each do |x| %>
+<%= number_to_currency(x) %><br>
+<% end %>
+Sum: <%= number_to_currency(@ss.inject(:+)) %> <br>
+Average: <%= number_to_currency(@ss.inject(:+)/@ss.count) %>
