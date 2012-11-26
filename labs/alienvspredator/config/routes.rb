@@ -3,6 +3,7 @@ Alienvspredator::Application.routes.draw do
   get '/about' => 'home#about'
   get '/faq' => 'home#faq'
   get '/creaturetypes' => 'creature_types#index'
+  post '/creaturetypes' => 'creature_types#create'
 
   # The priority is based upon order of creation:
   # first created -> highest priority.
