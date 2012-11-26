@@ -4,6 +4,6 @@ class CreatureTypesController < ApplicationController
   end
   def create
     name = params[:name]
-    CreatureType.cretae(:name => name)
+    @ct = CreatureType.create(:name => name)
   end
 end
