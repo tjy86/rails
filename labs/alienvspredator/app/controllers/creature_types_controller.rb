@@ -1,6 +1,6 @@
 class CreatureTypesController < ApplicationController
   def index
-    @creature_types = CreatureType.all
+    @creature_types = CreatureType.page(params[:page])
   end
   def create
     name = params[:name]
