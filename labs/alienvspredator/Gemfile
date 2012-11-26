@@ -9,6 +9,8 @@ gem 'pg'
 gem 'pry-rails'
 gem 'annotate'
 gem 'rails-footnotes'
+gem 'ipsum'
+gem 'bcrypt-ruby'
 
 
 # Gems used only for assets and not required
