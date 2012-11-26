@@ -10,4 +10,8 @@ class CreatureTypesController < ApplicationController
     id = params[:id]
     @creaturetype = CreatureType.find(id)
   end
+  def search
+    name = params[:name]
+    @creature_types = CreatureType.where(:name => name)
+  end
 end
