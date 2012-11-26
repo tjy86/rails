@@ -12,4 +12,5 @@
 #
 
 class Creature < ActiveRecord::Base
+	belongs_to :creature_type
 end
