@@ -11,7 +11,7 @@
 #
 # It's strongly recommended to check this file into your version control system.
 
-ActiveRecord::Schema.define(:version => 20121126151919) do
+ActiveRecord::Schema.define(:version => 20121126162340) do
 
   create_table "creature_types", :force => true do |t|
     t.string   "name"
@@ -23,9 +23,9 @@ ActiveRecord::Schema.define(:version => 20121126151919) do
     t.string   "name"
     t.string   "weapon"
     t.string   "password_digest"
-    t.integer  "creature_type"
-    t.datetime "created_at",      :null => false
-    t.datetime "updated_at",      :null => false
+    t.datetime "created_at",       :null => false
+    t.datetime "updated_at",       :null => false
+    t.integer  "creature_type_id"
   end
 
   create_table "messages", :force => true do |t|

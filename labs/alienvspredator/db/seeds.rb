@@ -9,6 +9,10 @@ ct4 = CreatureType.create(:name => 'Medusa')
 creature_types =  [ct1,ct2,ct3,ct4]
 weapons = ['knife','gun','boomerang','magic', 'mace']
 
-('Aa'..'Zz').each do |letter|
+('A'..'Z').each do |letter|
   c = Creature.create(:name => letter, :weapon => weapons.sample, :password => 'a', :password_confirmation => 'a', :creature_type => creature_types.sample)
+end
+
+25.times do |x|
+  Message.create(:message_text => 10.sentences, :sender_id => Creature.all.sample.id, :receiver_id => Creature.all.sample.id)
 end
