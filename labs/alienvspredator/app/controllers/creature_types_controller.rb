@@ -6,4 +6,7 @@ class CreatureTypesController < ApplicationController
     name = params[:name]
     @ct = CreatureType.create(:name => name)
   end
+  def show
+
+  end
 end
