@@ -1,5 +1,5 @@
 class CreatureTypesController < ApplicationController
-def index
-
-end
+  def index
+    @creature_types = CreatureType.all
+  end
 end
