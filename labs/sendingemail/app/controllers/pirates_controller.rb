@@ -15,6 +15,8 @@ class PiratesController < ApplicationController
   def show
     @pirate = Pirate.find(params[:id])
 
+    Notifications.welcome(@pirate.name).deliver
+
     respond_to do |format|
       format.html # show.html.erb
       format.json { render json: @pirate }
