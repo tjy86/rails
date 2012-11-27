@@ -1,4 +1,13 @@
 class GodsController < ApplicationController
+  def search
+    query = params[:query]
+    if query.present?
+      @gods = God.text_search(query)
+    else
+      @gods = god.all
+    end
+  end
+
   # GET /gods
   # GET /gods.json
   def index
