@@ -1,0 +1,11 @@
+<p id="notice"><%= notice %></p>
+  <%= @vacation.name %>
+  <%= @vacation.lat %>
+  <%= @vacation.long %>
+  <%= @vacation.zoom %>
+
+<%= render :partial => 'map', :locals => {:lat => @vacation.lat, :long => @vacation.long, :zoom => @vacation.zoom } %>
+<%= render :partial => 'pin', :locals => {:vacation => @vacation} %>
+
+<%= link_to 'Edit', edit_vacation_path(@vacation) %> |
+<%= link_to 'Back', vacations_path %>
