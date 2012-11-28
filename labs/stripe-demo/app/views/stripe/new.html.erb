@@ -1,0 +1,9 @@
+
+<div id="transaction">
+  <script src="https://button.stripe.com/v1/button.js" class="stripe-button" data-key="<%= STRIPE_PUB %>"></script>
+
+  <%= form_tag '/stripe', :id => 'stripeform', :remote => true do %>
+    <%= hidden_field_tag 'token' %>
+    <%= number_field_tag 'amount' %>
+  <% end %>
+</div>
