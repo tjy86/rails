@@ -1,0 +1,8 @@
+$('#where').empty();
+$('#lat').empty();
+$('#long').empty();
+$('form').empty();
+
+$('#where').append('<%= @addy %>');
+$('#lat').append('Latitude: <%= @lat %>');
+$('#long').append('Longitude: <%= @long %>');

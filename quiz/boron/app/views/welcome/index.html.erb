@@ -1,0 +1,10 @@
+
+<%= form_tag '/geo', :remote => true do %>
+  <%= label_tag 'place:' %>
+  <%= text_field_tag 'place', '', :class => 'form' %>
+  <%= submit_tag 'go!', :class => 'form' %>
+<% end %>
+
+<div id='where'></div>
+<div id='lat'></div>
+<div id='long'></div>
