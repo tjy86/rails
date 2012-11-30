@@ -1,0 +1,14 @@
+$(function(){
+  $('#pirate_button').click(get_all_pirates);
+});
+
+function get_all_pirates () {
+  $.ajax({
+  type: "GET",
+  url: "http://3upa.localtunnel.com/pirates.json"
+    }).done(function( msg ) {
+      for(var i = 0; i < msg.length; i++){
+        $('#pirates').append('<h1>'+msg[i].name+'</h1>');
+      }
+    });
+}
