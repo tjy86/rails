@@ -1,4 +1,9 @@
 class MoviesController < ApplicationController
+
+  def data
+  end
+
+
   # GET /movies
   # GET /movies.json
   def index

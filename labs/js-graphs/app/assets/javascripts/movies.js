@@ -1,6 +1,16 @@
 $(function(){
 
-  // annual data
+  $('button').click(send_json_request_to_rails);
+
+});
+
+function send_json_request_to_rails () {
+  // body...
+}
+
+
+function display_graph (data) {
+    // annual data
   Morris.Line({
     element: 'moviegraph',
     data: [
@@ -12,5 +22,4 @@ $(function(){
     ykeys: ['a','b'],
     labels: ['Series A','Series B']
   });
-
-});
+}
