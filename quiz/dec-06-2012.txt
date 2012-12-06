@@ -1,0 +1,19 @@
+
+# 1 - 262.5
+
+# 2 - a stack frame is an abstract concept of a procedure that is run by a computer.  it is allocated space and memory and only one stack frame is running at one time, although there can be multiple stacks on top of each other.
+
+# 3 a - a set is a collection of elements with no duplicated elements, and in no particular order
+# 3 b - a list is a ordered collection of elements
+
+# 4 - big O notation is used to describe an algorithims time to process information as their data set grows.
+
+# 5 - O(n^2) where n = number of items to sort
+
+# 6 - you need to define nodes with two 'connectors'.  best practice is to insert these nodes one by one and define their connected counter parts
+
+# 7 - 8,244,910 nyc population -  source: us census bureau 2011
+#     311,591,917 US population - source; us census bureau 2011
+#     3,000,000,000 Total number of pizza’s sold in the U.S. each year source: Your Guide To Pizza, Pizza Market Place Date Verified: 9.4.2012
+#     9.62797760893 - average pizza sold per person in the united states - math
+#     79,381,808 : estimated number of pizza sold in nyc per year - more math
