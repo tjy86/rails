@@ -1,5 +1,9 @@
 JsGraphs::Application.routes.draw do
-  resources :movies
+  resources :movies do
+    collection do
+
+    end
+  end
 
 
   # The priority is based upon order of creation:
