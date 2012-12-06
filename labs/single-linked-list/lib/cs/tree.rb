@@ -1,5 +1,5 @@
 class Tree
-  attr_accessor :head
+  attr_accessor :head, :array
 
   def initialize
     @head = nil
@@ -15,7 +15,6 @@ class Tree
 
 
   def compare(word, node)
-
     if word > node.data
       if node.nxt.nil?
         node.nxt = Node.new(word)
@@ -29,6 +28,16 @@ class Tree
         compare(word,node.prv)
       end
     end
+  end
+
+  def sort
+    real_sort(@head)
+  end
+
+  def real_sort(node)
+    real_sort(node.prv) if node.prv
+    puts node.data
+    real_sort(node.nxt) if node.nxt
   end
 
 end
