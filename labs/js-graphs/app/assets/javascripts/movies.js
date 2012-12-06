@@ -5,21 +5,21 @@ $(function(){
 });
 
 function send_json_request_to_rails () {
-  // body...
+  $.ajax({
+    type: "POST",
+    url: "/movies/data"
+  }).done(function(msg) {
+    display_graph(msg);
+  });
 }
 
 
-function display_graph (data) {
-    // annual data
-  Morris.Line({
+function display_graph (movies) {
+  Morris.Bar({
     element: 'moviegraph',
-    data: [
-      {y: '2012', a: 100, b: 3},
-      {y: '2011', a: 75, b: 9},
-      {y: '2010', a: 50, b: 72},
-    ],
-    xkey: 'y',
-    ykeys: ['a','b'],
-    labels: ['Series A','Series B']
+    data: movies,
+    xkey: 'name',
+    ykeys: ['gross'],
+    labels: ['Movie Gross']
   });
 }

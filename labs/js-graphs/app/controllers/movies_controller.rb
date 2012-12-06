@@ -1,6 +1,8 @@
 class MoviesController < ApplicationController
 
   def data
+    movies = Movie.all
+    render :json => movies
   end
 
 
