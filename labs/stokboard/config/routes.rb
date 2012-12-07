@@ -2,7 +2,7 @@ Stokboard::Application.routes.draw do
 
   post '/stock' => 'home#stock'
   post '/update' => 'home#update'
-
+  post '/graph' => 'home#graph'
   # The priority is based upon order of creation:
   # first created -> highest priority.
 

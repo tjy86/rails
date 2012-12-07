@@ -1,5 +1,31 @@
+header{
+  width: 100%;
+}
+
 .quote{
   height: 100px;
-  width: 50px;
+  width: 100%;
+  border: 1px solid #000;
+}
+.s{
+  background-color: black;
+  color: #fff;
+}
+.n{
+
+}
+
+#stock_container{
+  width: 10%;
+  max-width: 100px;
+  height: 100%;
+  border: 1px solid #000;
+  float: left;
+}
+#graph_container{
+  float: left;
+  min-height: 500px;
+  height: 100%;
+  width: 80%;
   border: 1px solid #000;
 }

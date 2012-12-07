@@ -22,4 +22,15 @@ class HomeController < ApplicationController
     z[:prices] = Price.all
     render :json => z
   end
+  def graph
+    stocks = Stock.uniq
+    prices = {}
+
+    stocks.each do |x|
+
+      prices[x.symbol] = x.prices
+    end
+
+    render :json => prices
+  end
 end
