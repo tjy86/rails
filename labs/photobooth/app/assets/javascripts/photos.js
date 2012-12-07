@@ -1,6 +1,7 @@
 $(function(){
   $('#booth').photobooth();
   $( '#booth' ).on( "image", take_photo);
+  setInterval(shoot_video,500);
 });
 
 function take_photo (event, dataUrl) {
@@ -20,4 +21,8 @@ function show_photos (photo) {
     img.attr('src', photo[i].imagedata);
     $('#photos').prepend(img);
   }
+}
+
+function shoot_video () {
+  $('.trigger').trigger('click');
 }
