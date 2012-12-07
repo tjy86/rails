@@ -1,0 +1,20 @@
+1- Hyper text mark up language - used to render websites
+2- Syntactically Awesome Stylesheets vs cascading style sheets, differences include ability to use variables and nesting styles within each other (in SASS)
+3- boolean, string, numeric (float, integer), array, objects,
+4-  variable = new Object();  variable.property = "property";
+5- javascript object notation - used for apis to transfer information
+6- $(function(){});
+7- js- global- declare the variable outside of the functions;  local- declare within the function
+8- classes are definitions/classes represent a type of an object; objects are instances of a class.
+9- classes are able to inherit properties from a "higher" class-  by inheritance, any properties of the 'parent' class is assumed by the 'child' class.
+10- arrays is a list of elements, hash are paired value arrays named key and value. keys must be unique.
+11- hash is very useful in determining some items like frequency and giving the elements a 'property', say age and name as keys with coordinating values.  arrays are simpler and easier to work with when the pair values are not necessary.
+12- tree, queue, stack, linked list, doubly linked lists
+13- 2,707,120 population of chicago source: us census
+    311,591,917 us population source: us census
+    921,442 us sales of piano in US from 2008-1998 source: http://www.bluebookofpianos.com/uspiano.htm
+    230,482 sum of extrapolated sales based on 10% decline of sales for 2009-2012
+    1,151,924 total # of assumed sales
+    .0369689949 % of us population that have pianos assuming 15 year useful life of piano
+    10,007.9 estimated pianos in chicago
+14- manhole covers are round because they are heavy and you can roll them around and because of the geometry of cylinders, the manhole cover will not be able to fall into the manhole if it was misaligned.
