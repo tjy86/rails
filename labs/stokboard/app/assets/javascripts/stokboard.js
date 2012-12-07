@@ -1,14 +1,30 @@
 $(function(){
-  $('#enter').click(get_quotes);
+  $('#enter').click(add_quotes);
+  setTimeout(update,3000);
 });
 
-function get_quotes () {
+function add_quotes () {
   symbol = $('#symbol').val();
   $.ajax({
     type: "POST",
     url: "/stock",
     data: { symbol: symbol }
-  }).done(function( msg ) {
-    alert( "Data Saved: " + msg );
   });
+}
+
+function update () {
+  $('#stock_container').empty();
+  $.ajax({
+    type: "POST",
+    url: "/update"
+  }).done(function( msg ) {
+    for (i = 0; i < msg.length; i++){
+      span = $('<span>');
+      span.addClass('quote');
+      span.text(msg[i].symbol);
+      span.text(msg[i].symbol);
+      $('#stock_container').append(span);
+    }
+  });
+
 }
