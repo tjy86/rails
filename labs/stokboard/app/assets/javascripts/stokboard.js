@@ -3,11 +3,11 @@ $(function(){
 });
 
 function get_quotes () {
-  symbol = $('symbol').value();
+  symbol = $('#symbol').val();
   $.ajax({
     type: "POST",
-    url: "",
-    data: { name: "John", location: "Boston" }
+    url: "/stock",
+    data: { symbol: symbol }
   }).done(function( msg ) {
     alert( "Data Saved: " + msg );
   });

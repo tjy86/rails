@@ -1,4 +1,8 @@
 Stokboard::Application.routes.draw do
+
+  post '/stock' => 'home#stock'
+  post '/update' => 'home#update'
+
   # The priority is based upon order of creation:
   # first created -> highest priority.
 
