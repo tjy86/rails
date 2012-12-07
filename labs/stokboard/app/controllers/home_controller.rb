@@ -17,6 +17,9 @@ class HomeController < ApplicationController
       a.stock = s
       a.save
     end
-    render :json => Stock.all
+    z = {}
+    z[:stocks] = Stock.all
+    z[:prices] = Price.all
+    render :json => z
   end
 end

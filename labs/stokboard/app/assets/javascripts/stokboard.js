@@ -1,6 +1,6 @@
 $(function(){
   $('#enter').click(add_quotes);
-  setTimeout(update,3000);
+  setTimeout(update,1);
 });
 
 function add_quotes () {
@@ -18,12 +18,13 @@ function update () {
     type: "POST",
     url: "/update"
   }).done(function( msg ) {
-    for (i = 0; i < msg.length; i++){
-      span = $('<span>');
-      span.addClass('quote');
-      span.text(msg[i].symbol);
-      span.text(msg[i].symbol);
-      $('#stock_container').append(span);
+    for (i = 0; i < msg['stocks'].length; i++){
+      div = $('<div>');
+      div.addClass('quote');
+      add = msg['stocks'].length-i;
+      length = msg['prices'].length-add;
+      div.text(msg['stocks'][i].symbol +' '+msg['prices'][length].num);
+      $('#stock_container').append(div);
     }
   });
 
