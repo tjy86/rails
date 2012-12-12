@@ -29,3 +29,8 @@ header{
   width: 80%;
   border: 1px solid #000;
 }
+
+.graph{
+  height: 200px;
+  width: 100%;
+}

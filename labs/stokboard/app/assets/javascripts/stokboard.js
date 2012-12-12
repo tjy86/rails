@@ -1,6 +1,8 @@
 $(function(){
   $('#enter').click(add_quotes);
-  setTimeout(update,1);
+
+  setInterval(update,1000);
+  setInterval(graph,1000);
   $('#update').click(update);
   $('#graph').click(graph);
 });
@@ -15,11 +17,12 @@ function add_quotes () {
 }
 
 function update () {
-  $('#stock_container').empty();
+
   $.ajax({
     type: "POST",
     url: "/update"
   }).done(function( msg ) {
+    $('#stock_container').empty();
     for (i = 0; i < msg['stocks'].length; i++){
 
       add = msg['stocks'].length-i;
@@ -42,19 +45,27 @@ function update () {
 }
 
 function graph () {
-  $('#graph_container').empty();
+
   $.ajax({
     type: "POST",
     url: "/graph"
   }).done(function( msg ) {
+  $('#graph_container').empty();
     for (var prop in msg){
       console.log(prop);
+      g = $('<div>');
+      g.addClass('graph');
+      g.attr('id', prop);
+      $('#graph_container').append(g);
       Morris.Line({
-        element: 'graph_container',
+        element: prop,
         data: msg[prop],
         xkey: 'created_at',
         ykeys: ['num'],
-        labels: ['Price']
+        labels: ['Price'],
+        ymin: 'auto',
+        ymax: 'auto'
+
       });
 
     }
