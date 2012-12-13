@@ -4,6 +4,7 @@ class NinjasController < ApplicationController
   def index
     @ninjas = Ninja.all
 
+
     respond_to do |format|
       format.html # index.html.erb
       format.json { render json: @ninjas }
