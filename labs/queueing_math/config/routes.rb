@@ -1,4 +1,7 @@
 QueueingMath::Application.routes.draw do
+  resources :computations
+
+
   # The priority is based upon order of creation:
   # first created -> highest priority.
 
