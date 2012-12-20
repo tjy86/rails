@@ -42,12 +42,9 @@ class ComputationsController < ApplicationController
   def create
 
     calc = params[:computation][:name]
-    computaiton = Computation.new
-    result=  computation.compute(calc)
-
-
-    @computation = Computation.create(:name => calc, :result => result)
-    redirect_to @computation
+    work = Work.new
+    work.delay.compute(calc)
+    redirect_to '/computations'
   end
 
   # PUT /computations/1
