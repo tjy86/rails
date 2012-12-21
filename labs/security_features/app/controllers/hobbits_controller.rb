@@ -41,7 +41,7 @@ class HobbitsController < ApplicationController
   # POST /hobbits.json
   def create
     # binding.pry
-    @hobbit = Hobbit.new(params.require(:hobbit).permit(:name, :role))
+    @hobbit = Hobbit.new(params.require(:hobbit).permit(:name))
 
     respond_to do |format|
       if @hobbit.save
